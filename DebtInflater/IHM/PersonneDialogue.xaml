@@ -1,0 +1,23 @@
+﻿<Window x:Class="DebtInflater.IHM.PersonneDialogue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DebtInflater.IHM"
+        mc:Ignorable="d"
+        Title="PersonneDialogue" SizeToContent="WidthAndHeight" Topmost="True" WindowStartupLocation="CenterOwner" WindowStyle="None">
+    <StackPanel>
+        <Label HorizontalAlignment="Center">Prénom</Label>
+        <TextBox Name="PrénomTextBlock" HorizontalAlignment="Center" Foreground="Gray" Text="{Binding Prénom}"/>
+        <Label HorizontalAlignment="Center">Nom</Label>
+        <TextBox Name="NomTextBlock" HorizontalAlignment="Center" Foreground="Gray" Text="{Binding Nom}"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Name="ValiderButton" Click="ValiderButton_Click" Margin="4 4 4 4">Valider</Button>
+            <Button Name="AnnulerButton" Click="AnnulerButton_Click" Margin="4 4 4 4" Grid.Column="1" IsDefault="True">Annuler</Button>
+        </Grid>
+    </StackPanel>
+</Window>
